@@ -11,7 +11,9 @@ ul, nav, body, h1, h2, h4, h6, p, figure {
   padding: 0;
 }
 
-a, button { transition: all 0.3s ease; }
+a, button {
+  transition: all 0.3s ease;
+}
 
 /* Bootstrap grid system  */
 
@@ -53,7 +55,7 @@ html {
 .col-lg-6,
 .col-md-4,
 .col-md-6,
-.col-sm-6, 
+.col-sm-6,
 .col-12 {
   position: relative;
   width: 100%;
@@ -81,7 +83,7 @@ html {
     flex: 0 0 33.333333%;
     max-width: 33.333333%;
   }
-  
+
   .col-md-6 {
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
@@ -95,13 +97,13 @@ html {
     flex: 0 0 25%;
     max-width: 25%;
   }
-  
+
   .col-lg-4 {
     -ms-flex: 0 0 33.333333%;
     flex: 0 0 33.333333%;
     max-width: 33.333333%;
   }
-  
+
   .col-lg-6 {
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
@@ -172,7 +174,7 @@ html {
 }
 
 .tm-mb-p {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .tm-text-success {
@@ -377,11 +379,11 @@ p, address {
   .tm-section {
     max-width: 1120px;
   }
-  
+
   .tm-container-inner {
     max-width: 1120px;
   }
-  
+
   .tm-container-inner-2 {
     max-width: 900px;
   }
@@ -441,7 +443,7 @@ p, address {
 }
 
 .tm-description-figure {
-  text-align: center;  
+  text-align: center;
 }
 
 .tm-description-box {
@@ -592,10 +594,10 @@ p, address {
 }
 
 @media (min-width: 768px) {
- .tm-history-img {
+  .tm-history-img {
     max-width: 50%;
   }
-  
+
   .tm-history-inner {
     flex-direction: row;
   }
@@ -618,10 +620,10 @@ p, address {
 }
 
 @media (min-width: 768px) {
- .tm-history-text {
+  .tm-history-text {
     max-width: auto;
     margin: 0 auto 0 35px;
-  } 
+  }
 }
 
 /* Contact Page */
@@ -630,9 +632,9 @@ p, address {
 }
 
 @media (min-width: 768px) {
- .tm-contact-form {
+  .tm-contact-form {
     max-width: 310px;
-  } 
+  }
 }
 
 .tm-d-flex {
@@ -720,9 +722,9 @@ address {
 }
 
 @media (min-width: 768px) {
- .tm-address-box {
+  .tm-address-box {
     max-width: 315px;
-  } 
+  }
 }
 
 .tm-contact-icon {
@@ -852,12 +854,14 @@ address {
 .panel p {
   padding: 5px 20px 30px;
 }
+
 /* Schedule */
 
-.logo{
+.logo {
   width: 35px;
 }
-.schedule{
+
+.schedule {
   display: flex;
   justify-content: space-between;
   padding: 10px;
@@ -866,21 +870,26 @@ address {
   border-radius: 10px;
   font-size: 1rem;
 }
-.schedules{
-  
+
+.schedules {
+
   width: 80%;
   margin: auto;
-  
+
 }
-.team{
+
+.team {
   display: flex;
+  flex: 1 1 0;
   position: relative;
   justify-content: space-between;
 }
-.team b{
+
+.team b {
   margin: 10px;
 }
-.vs{
+
+.vs {
 
   margin-top: 10px;
   font-weight: bold;
@@ -888,30 +897,33 @@ address {
 
 
 }
-.win{
+
+.win {
   position: absolute;
-  display:none;
+  display: none;
   color: #FFAF00;
   right: 0;
   top: -15px;
   font-size: 1.5em;
 }
-.none{
+
+.none {
   opacity: 0;
 }
 
-.tit{
+.tit {
   font-size: 1.1em;
   text-align: left;
   width: 80%;
   margin: auto;
-  padding-bottom:50px ;
+  padding-bottom: 50px;
   font-weight: bold;
 }
 
-.silver{
+.silver {
   border: 1px solid silver;
 }
-.gold{
+
+.gold {
   border: 1px solid gold;
 }
