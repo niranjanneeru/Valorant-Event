@@ -883,7 +883,7 @@ address {
   display: flex;
   flex: 1 1 0;
   position: relative;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .team b {
@@ -903,7 +903,7 @@ address {
   position: absolute;
   display: none;
   color: #FFAF00;
-  right: 0;
+  right: 30%;
   top: -15px;
   font-size: 1.5em;
 }
