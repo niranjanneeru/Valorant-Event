@@ -61,6 +61,7 @@ https://templatemo.com/tm-539-simple-house
       <h2 class="tit col-12 text-center tm-section-title">Finals</h2>
       <div class="schedules">
         {% for final in finals %}
+          <p style="color: #999;padding:5px; ">{{ final.date }}</p>
           <div class="schedule gold">
             <div class="team">
               <img src="{{ final.team1.logo }}" class="logo">
@@ -88,6 +89,7 @@ https://templatemo.com/tm-539-simple-house
       <h2 class="tit col-12 text-center tm-section-title">Semi finals</h2>
       <div class="schedules">
         {% for final in semi_finals %}
+          <p style="color: #999;padding:5px; ">{{ final.date }}</p>
           <div class="schedule silver">
             <div class="team">
               <img src="{{ final.team1.logo }}" class="logo">
@@ -115,6 +117,7 @@ https://templatemo.com/tm-539-simple-house
       <h2 class="tit col-12 text-center tm-section-title">Quarters</h2>
       <div class="schedules">
         {% for final in qrtrs %}
+          <p style="color: #999;padding:5px; ">{{ final.date }}</p>
           <div class="schedule silver">
             <div class="team">
               <img src="{{ final.team1.logo }}" class="logo">
@@ -141,6 +144,7 @@ https://templatemo.com/tm-539-simple-house
     <h2 class="tit col-12 text-center tm-section-title">Prelims</h2>
     <div class="schedules">
       {% for final in prelims %}
+        <p style="color: #999;padding:5px; ">{{ final.date }}</p>
         <div class="schedule silver">
           <div class="team">
             <img src="{{ final.team1.logo }}" class="logo">
