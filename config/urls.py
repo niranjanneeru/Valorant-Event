@@ -6,8 +6,8 @@ from django.views import defaults as default_views
 from django.views.generic import TemplateView
 
 urlpatterns = [
-                  # path('', include('valo_ascendo.schedule.urls')),
-                  path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
+                  path('', include('valo_ascendo.schedule.urls')),
+                  path("home/", TemplateView.as_view(template_name="pages/home.html"), name="home"),
                   path(
                       "about/", TemplateView.as_view(template_name="pages/about.html"), name="about"
                   ),
