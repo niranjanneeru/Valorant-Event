@@ -1,0 +1,214 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Valorant</title>
+	<link rel="icon" href="{% static 'img/simple-house-logo.png' %}" type="image/gif" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" />    
+	<link href="{% static 'css/templatemo-style.css' %}" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/brands.min.css" integrity="sha512-apX8rFN/KxJW8rniQbkvzrshQ3KvyEH+4szT3Sno5svdr6E/CP0QE862yEeLBMUnCqLko8QaugGkzvWS7uNfFQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css" integrity="sha512-OdEXQYCOldjqUEsuMKsZRj93Ht23QRlhIb8E/X0sbwZhme8eUw6g8q7AdxGJKakcBbv7+/PX0Gc2btf7Ru8cZA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<!--
+
+Simple House
+
+https://templatemo.com/tm-539-simple-house
+
+-->
+<body> 
+
+	<div class="container">
+	<!-- Top box -->
+		<!-- Logo & Site Name -->
+		<div class="placeholder">
+			<div class="parallax-window" data-parallax="scroll" data-image-src="{% static 'img/simple-house-01.jpg' %}">
+				<div class="tm-header">
+					<div class="row tm-header-inner no-p" style="width: 99%;">
+						<div class="col-md-6 col-12 no-p" >
+							<img src="{% static 'img/simple-house-logo.png' %}" alt="Logo" class="tm-site-logo" /> 
+							<div class="tm-site-text-box" >
+								<h1 class="tm-site-title">ACM-ASCENDO</h1>
+								<h6 class="tm-site-description">Valorant tournament/h6>	
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<main>
+			<header class="row tm-welcome-section">
+				<h2 class="col-12 text-center tm-section-title">Welcome to the ASCENDO-VALORANT</h2>
+				<p class="col-12 text-center">To all the gamers out there, ACM TKMCE challenges you in its Valo tournament conducted as part of the ASCENDO! fest. 
+					<br>
+					Get ready to Stand Tall. Be the Valorants, be the fighters.
+					</p>
+			</header>
+			{%if finals%}
+			<h2 class="tit col-12 text-center tm-section-title">Finals</h2>
+			<div class="schedules">
+				{%for final in finals%}
+				<div class="schedule gold">
+					<div class="team">
+						<img src = "{{final.f_host.logo}}" class="logo">
+						<b>{{final.f_host.name}}</b>
+						{%if final.winner == 1%}
+						<i class="win fas fa-check-square"></i>
+						{%endif%}
+					</div>
+					<span class="vs">Vs</span>
+					<div class="team">
+						<b>{{final.f_opponent.name}}</b>
+						<img src = "{{final.f_opponent.logo}}" class="logo">
+						{%if final.winner == -1%}
+						<i class="win fas fa-check-square"></i>
+						{%endif%}
+					</div>
+				</div>
+				<br><br>
+				{%endfor%}
+			</div>
+			<hr style="margin: 15px;">
+			{%endif%}
+
+			{%if semi_finals%}
+			<h2 class="tit col-12 text-center tm-section-title">Semi finals</h2>
+			<div class="schedules">
+				{%for final in semi_finals%}
+				<div class="schedule silver">
+					<div class="team">
+						<img src = "{{final.sf_host.logo}}" class="logo">
+						<b>{{final.sf_host.name}}</b>
+						{%if final.winner == 1%}
+						<i class="win fas fa-check-square"></i>
+						{%endif%}
+					</div>
+					<span class="vs">Vs</span>
+					<div class="team">
+						<b>{{final.sf_opponent.name}}</b>
+						<img src = "{{final.sf_opponent.logo}}" class="logo">
+						{%if final.winner == -1%}
+						<i class="win fas fa-check-square"></i>
+						{%endif%}
+					</div>
+				</div>
+				<br><br>
+				{%endfor%}
+			</div>
+			<hr style="margin: 15px;">
+			{%endif%}
+
+			{%if qrtrs%}
+			<h2 class="tit col-12 text-center tm-section-title">Quarters</h2>
+			<div class="schedules">
+				{%for final in qrtrs%}
+				<div class="schedule silver">
+					<div class="team">
+						<img src = "{{final.qf_host.logo}}" class="logo">
+						<b>{{final.qf_host.name}}</b>
+						{%if final.winner == 1%}
+						<i class="win fas fa-check-square"></i>
+						{%endif%}
+					</div>
+					<span class="vs">Vs</span>
+					<div class="team">
+						<b>{{final.qf_opponent.name}}</b>
+						<img src = "{{final.qf_opponent.logo}}" class="logo">
+						{%if final.winner == -1%}
+						<i class="win fas fa-check-square"></i>
+						{%endif%}
+					</div>
+				</div>
+				<br><br>
+				{%endfor%}
+			</div>
+			<hr style="margin: 15px;">
+			{%endif%}
+
+			<h2 class="tit col-12 text-center tm-section-title">Prelims</h2>
+			<div class="schedules">
+				{%for final in prelims%}
+				<div class="schedule silver">
+					<div class="team">
+						<img src = "{{final.ko_host.logo}}" class="logo">
+						<b>{{final.ko_host.name}}</b>
+						{%if final.winner == 1%}
+						<i class="win fas fa-check-square"></i>
+						{%endif%}
+					</div>
+					<span class="vs">Vs</span>
+					<div class="team">
+						<b>{{final.ko_opponent.name}}</b>
+						<img src = "{{final.ko_opponent.logo}}" class="logo">
+						{%if final.winner == -1%}
+						<i class="win fas fa-check-square"></i>
+						{%endif%}
+					</div>
+				</div>
+				<br><br>
+				{%endfor%}
+			</div>
+
+			<br><br>
+			<div class="rules">
+				<h2 class="col-12 text-center tm-section-title">Rules</h2>
+				<ul class="rules_">
+					<li> Match mode is 5v5 UNRATED and the map is BIND (selected based on the number of votes).</li>
+					<li> The tournament will completely be of knockout mode consisting of  Pre-Quarters, Quarter-finals, Semi-finals and Finals. The Finals will be played thrice with 3 different maps and the best of three will be considered for the winner.</li>
+					<li> In case of AFK and other technical issues, the team members have to report the same which will grant them a 5 minute pause. Teams with more than 5 members (all must be registered) can also ask the extra person to login to the account if any of their players have network issues during gameplay. Anyhow after 5 minutes, the game will continue.</li>
+					<li> Disrespectful behaviour towards the host or other participants will result in a direct elimination from the tournament.</li>
+					<li> Coordinators have the right to make changes in the tournament whenever necessary.</li>
+				</ul>
+				<style>
+					.rules{
+						width: 80%;
+						margin: auto;
+		
+		
+		
+					}
+					.rules_{
+						padding: 15px;
+						list-style: none;
+					}
+					.rules_ li{
+						background-color: #141B1E;;
+						padding: 10px;
+						margin: 5px;
+						color: white;
+						border-radius: 5px;
+					}
+		
+				</style>
+			</div>
+	
+	<footer class="tm-footer text-center">
+		<p>Copyright &copy; ASCENDO 2021 
+		
+		|  <a rel="nofollow" href="#">ACM tech team</a></p>
+	</footer>
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<script src="{% static 'js/parallax.min.js' %}"></script>
+	<script>
+		$(document).ready(function(){
+			// Handle click on paging links
+			$('.tm-paging-link').click(function(e){
+				e.preventDefault();
+				
+				var page = $(this).text().toLowerCase();
+				$('.tm-gallery-page').addClass('hidden');
+				$('#tm-gallery-page-' + page).removeClass('hidden');
+				$('.tm-paging-link').removeClass('active');
+				$(this).addClass("active");
+			});
+		});
+	</script>
+</body>
+</html>
