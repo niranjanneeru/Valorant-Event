@@ -10,12 +10,12 @@ class Team(models.Model):
 
 
 class Final(models.Model):
-    team1 = models.OneToOneField(Team, models.SET_NULL,
-                                 blank=True,
-                                 null=True, related_name='f_host')
-    team2 = models.OneToOneField(Team, models.SET_NULL,
-                                 blank=True,
-                                 null=True, related_name='f_opponent')
+    team1 = models.ForeignKey(Team, models.SET_NULL,
+                              blank=True,
+                              null=True, related_name='f_host')
+    team2 = models.ForeignKey(Team, models.SET_NULL,
+                              blank=True,
+                              null=True, related_name='f_opponent')
 
     CHOICES = [(1, 'TEAM 1'),
                (-1, 'TEAM 2'),
